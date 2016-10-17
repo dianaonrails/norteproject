@@ -26,7 +26,6 @@ p{
 
 .parallax-content{
 	width: 100%;
-	float: left;
 	background-color: #F5F5F5;
 }
 
@@ -543,8 +542,8 @@ p{
 /**********OTHER PAGES***************/
 
 .page-block{
-	margin-top: 40px;
-	margin-bottom: 30px;
+	padding-top: 40px;
+	padding-bottom: 30px;
 }
 
 .left-title{
