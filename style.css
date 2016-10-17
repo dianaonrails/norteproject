@@ -16,6 +16,10 @@ html{
 	cursor: pointer;
 }
 
+.btn-primary:hover{
+	color:black;
+}
+
 
 .btn-secondary{
 	background-color: transparent;
@@ -29,6 +33,12 @@ html{
 	top:50%;
 	font-weight:600;
 	cursor: pointer;
+}
+
+.btn-secondary:hover{
+	background-color: #E8D482;
+	color:black;
+	border:none;
 }
 
 .separate-line{
@@ -56,6 +66,8 @@ p{
 .parallax-content{
 	width: 100%;
 	background-color: #F5F5F5;
+	padding-top: 40px;
+	padding-bottom: 40px;
 }
 
 .parallax { 
@@ -584,7 +596,7 @@ p{
 
 .team{
 	padding-top: 40px;
-	padding-bottom: 80px;
+	padding-bottom: 60px;
 }
 
 .team .team__icon{
@@ -594,13 +606,14 @@ p{
 }
 
 .team .team__title{
-	font-size: 15px;
+	font-size: 18px;
 	text-align: center;
 	margin-bottom: 5px;
+	font-weight: 500;
 }
 
 .team .team__description{
-	font-size: 11px;
+	font-size: 15px;
 	text-align: center;
 }
 
@@ -650,6 +663,82 @@ p{
 	text-align: left;
 }
 
+
+.services{
+	float: left;
+	width: 100%;
+	margin-top: 20px;
+}
+
+.services__container{
+	width: 28%;
+	float: left;
+	margin-right: 10px;
+	background-color: white;
+	padding: 20px;
+	min-height: 147px;
+}
+
+.services__container:last-child{
+	margin-right: 0;
+}
+
+.services__title{
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	text-decoration: none;
+	color:black;
+	cursor: pointer;
+}
+
+.services__title:hover{
+	border-bottom: 1px solid black;
+	color:black;
+
+}
+
+.contacts{
+	margin-top:50px;
+	margin-bottom: 40px;
+}
+
+.contacts .contacts__msg{
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.contact-form{
+	margin-top: 30px;
+	width: 100%;
+	float: left;
+}
+
+.form-input{
+	width: 100%;
+}
+
+.form-textarea{
+	height: 130px;
+	width: 100%;
+}
+
+.form-submit{
+	float: right;
+	border-radius: 0 !important;
+}
+
+.form-submit:hover{
+	background-color: #E8D482;
+	border:none;
+	color:white;
+}
+
+.googlemaps{
+	width: 100%;
+	height: 280px;
+}
+
 /*************FOOTER***************/
 
 .footer{
@@ -660,6 +749,7 @@ p{
 	padding-top: 20px;
 	padding-bottom: 20px;
 	background-color: #EAE9E5;
+
 }
 
 .footer__title{
