@@ -24,6 +24,12 @@ p{
 	margin-bottom: 5px;
 }
 
+.parallax-content{
+	width: 100%;
+	float: left;
+	background-color: #F5F5F5;
+}
+
 .parallax { 
     /* The image used */
     background-image: url("images/building.jpg");
