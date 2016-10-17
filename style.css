@@ -554,8 +554,8 @@ p{
 }
 
 .team{
-	margin-top: 20px;
-	margin-bottom: 50px;
+	padding-top: 40px;
+	padding-bottom: 80px;
 }
 
 .team .team__icon{
