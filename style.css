@@ -776,6 +776,11 @@ p{
 	margin-bottom: 5px;
 }
 
+.footer__list li a{
+	text-decoration: none;
+	color: black;
+}
+
 .footer__social span{
 	font-size: 18px;
 	margin-right: 3px;
