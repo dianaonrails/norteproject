@@ -525,17 +525,17 @@ p{
 
 .section-projects__item-title{
 	position: absolute;
-	bottom:80px;
+	bottom:100px;
 	left: 20px;
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 500;
 	color:white;
 	text-decoration: none;
 	cursor: pointer;
 }
+
 .section-projects__item-title:hover{
-	border-bottom: 1px solid white;
-	color:white;
+	color:#E8D482;
 }
 
 .section-projects__item-description{
@@ -544,10 +544,12 @@ p{
 	color:white;
 	text-align: left;
 	position: absolute;
-	bottom:40px;
+	bottom:60px;
 	left: 20px;
-	line-height: 1.2;
+	line-height: 1.3;
 }
+
+
 
 .section-testimonials{
 	margin-top: 50px;
