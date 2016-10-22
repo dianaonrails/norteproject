@@ -6,6 +6,32 @@ ul{
 	list-style-type: disc;
 }
 
+.quote{font-size: 40px; vertical-align: middle;}
+
+.circles{
+	position: relative;
+	top:50px;
+	width: 10%;
+	margin:0 auto;
+}
+
+.circle {
+	border-radius: 50%;
+	width: 10px;
+    height: 10px;
+    background-color: gray;
+    display: inline-block;
+    margin-right: 5px;
+	/* width and height can be anything, as long as they're equal */
+}
+
+.circle:last-child{
+	margin-right: 0;
+}
+
+.circle.active{
+	background-color:white;
+}
 
 .btn-primary{
 	background-color: #E8D482;
@@ -556,7 +582,7 @@ p{
 	background-image: url('images/pexels-photo.jpg');
 	background-size: cover;
 	background-position: 80% 100%;
-	height: 300px;
+	height: 330px;
 	width: 100%;
 	position: relative;
 }
@@ -564,7 +590,7 @@ p{
 .section-testimonials__background{
 	position: absolute;
 	top:0;
-	height: 300px;
+	height: 330px;
 	width: 100%;
 	background-color: rgba(42,39,39,0.6);
 }
@@ -579,13 +605,20 @@ p{
 }
 
 .section-testimonials .section-testimonials__text{
+	display: none;
 	text-align: center;
 	position: relative;
 	font-weight: 300;
 	font-style: italic;
 	font-size: 20px;
 	color:white;
+	line-height: 1.2;
 }
+
+.section-testimonials__text.current{
+	display: block;
+}
+
 
 /**********OTHER PAGES***************/
 

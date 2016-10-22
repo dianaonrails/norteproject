@@ -32,28 +32,39 @@ $(document).ready(function() {
 
   
 
-  $('.js-right').click(function(){
+  $('.js-testimonial').click(function(){
+     
+     $('.circle').removeClass('active');
+     $('.section-testimonials__text').removeClass('current');
+
+     $(this).addClass('active');
+     var id = $(this).attr('id');
+
+     switch(id){
+      case 'first':
+        $('.section-testimonials__text:first').addClass('current');
+        break;
+      case 'second':
+        $('.section-testimonials__text:nth-child(3)').addClass('current');
+        break; 
+      case 'third':
+        $('.section-testimonials__text:nth-child(4)').addClass('current');
+        break;    
+      default:
+        break;  
+     }
     
-    var old = $('.testimonial.current');
-    if(old.next('.testimonial').length > 0){
-      old.next('.testimonial').addClass('current');
-    }
-    else{
-      $('.testimonial:first').addClass('current');
-    }
-  
-    old.removeClass('current');
   });
  
 
   $('.js-left').click(function(){
     
     var old = $('.testimonial.current');
-    if(old.prev('.testimonial').length > 0){
-      old.prev('.testimonial').addClass('current');
+    if(old.prev('.section-testimonials__text').length > 0){
+      old.prev('.section-testimonials__text').addClass('current');
     }
     else{
-      $('.testimonial:last').addClass('current');
+      $('.section-testimonials__text:last').addClass('current');
     }
     
 
