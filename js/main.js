@@ -38,6 +38,9 @@ $(document).ready(function() {
     x = (x+6 <= size_li) ? x+6 : size_li;
     $('.projects .projects__list:lt('+x+')').show();
     $('.projects .projects__list:lt('+x+')').parent().css('margin-bottom','20px');
+    if( x == size_li){
+      $(this).hide();
+    }
   });
 
   $('.js-testimonial').click(function(){
