@@ -21,6 +21,10 @@ function validateEmail(email) {
 }  
 
 $(document).ready(function() {
+  var size_li = $(".projects__list").length;
+  var x=6;
+
+  $('.projects .projects__list:lt('+x+')').show();
 
   $('.js-menu').click(function(e){
 
@@ -29,8 +33,12 @@ $(document).ready(function() {
       $('.navbar-mobile__nav-toggle-title').toggleClass("closed");
       $('.list-closed').toggle("slow");
   });
-
   
+  $('.js-more').click(function(){
+    x = (x+6 <= size_li) ? x+6 : size_li;
+    $('.projects .projects__list:lt('+x+')').show();
+    $('.projects .projects__list:lt('+x+')').parent().css('margin-bottom','20px');
+  });
 
   $('.js-testimonial').click(function(){
      

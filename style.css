@@ -6,12 +6,122 @@ ul{
 	list-style-type: disc;
 }
 
+/*Eliminates padding, centers the thumbnail */
+body, html {
+  padding: 0;
+  margin: 0;
+}
+
+/* Styles the thumbnail */
+
+
+/* Styles the lightbox, removes it from sight and adds the fade-in transition */
+.lightbox-target {
+  position: fixed;
+  top: -100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+  overflow: hidden;
+}
+
+/* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
+.lightbox-target img {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 0%;
+  max-width: 0%;
+  border: 3px solid white;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+/* Styles the close link, adds the slide down transition */
+a.lightbox-close {
+  display: block;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  background: white;
+  color: black;
+  text-decoration: none;
+  position: absolute;
+  top: -80px;
+  right: 0;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+/* Provides part of the "X" to eliminate an image from the close link */
+a.lightbox-close:before {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 1px;
+  background: black;
+  position: absolute;
+  left: 26px;
+  top: 10px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Provides part of the "X" to eliminate an image from the close link */
+a.lightbox-close:after {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 1px;
+  background: black;
+  position: absolute;
+  left: 26px;
+  top: 10px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
+.lightbox-target:target {
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.lightbox-target:target img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.lightbox-target:target a.lightbox-close {
+  top: 0px;
+}
+
 .quote{font-size: 40px; vertical-align: middle;}
 
 .circles{
 	position: relative;
-	top:50px;
-	width: 10%;
+	top:40px;
+	width: 8%;
 	margin:0 auto;
 }
 
@@ -22,6 +132,7 @@ ul{
     background-color: gray;
     display: inline-block;
     margin-right: 5px;
+    cursor: pointer;
 	/* width and height can be anything, as long as they're equal */
 }
 
@@ -241,7 +352,7 @@ p{
 }
 
 .navbar-mobile__title{
-	text-align: center;
+	text-align: left;
     color: white;
     font-size: 20px;
     top: 10px;
@@ -286,7 +397,7 @@ p{
 }
 
 .navbar-mobile .list-item a:hover{
-	color:#fa9585;
+	color:#E8D482;
 }
 
 .closed{
@@ -601,7 +712,7 @@ p{
 	font-weight: 500;
 	font-size: 25px;
 	margin-bottom: 40px;
-	padding-top: 60px;
+	padding-top: 35px;
 }
 
 .section-testimonials .section-testimonials__text{
@@ -617,6 +728,13 @@ p{
 
 .section-testimonials__text.current{
 	display: block;
+}
+
+.section-testimonials .section-testimonials__person{
+	text-align: center;
+	font-size: 20px;
+	font-weight: 700;
+	font-style: normal;
 }
 
 
@@ -667,16 +785,54 @@ p{
 	padding-bottom: 80px;
 }
 
+.projects .projects__block{
+	
+	
+}
+
+
 .projects .projects__container{
 	display: inline-block;
 	float: left;
-	width: 24%;
 	margin-left: 0;
 	margin-right: 10px;
 }
 
+.projects .projects__index{
+	width: 24%;
+}
+
+.projects .projects__list{
+	width: 32%;
+	display: none;
+}
+
 .projects .projects__container:last-child{
 	margin-right: 0;
+}
+
+.projects .projects__hidden{
+	
+}
+
+.projects__more{
+	margin-top: 40px;
+	text-align: center;
+	padding: 10px 20px;
+	background-color: transparent;
+	border:1px solid black;
+	color:black;
+	font-family: 'Montserrat';
+	width: 150px;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+.projects__more:hover{
+	background-color: #E8D482;
+	border:1px solid #E8D482;
+	color:white;
+
 }
 
 .projects .projects__image{
@@ -689,12 +845,20 @@ p{
 .projects .projects__content{
 	background-color: white;
 	padding: 10px;
+	min-height: 65px;
 }
 
 .projects .projects__title{
 	font-size: 16px;
 	font-weight: 700;
 	text-align: left;
+	color:black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.projects .projects__title:hover{
+	color:#E8D482;
 }
 
 .projects .projects__description{
@@ -887,6 +1051,7 @@ p{
 
 	.navbar-mobile .list-item{
 		margin-bottom: 2em;
+		text-align: left;
 	}
 
 	.projects__container{
@@ -894,5 +1059,122 @@ p{
 		width: 100%;
 		margin-bottom: 10px;
 		margin-right: 0;
+	}
+
+	.center-text{
+		font-size: 34px;
+	}
+
+	.parallax-title{
+		font-size: 20px;
+	}
+
+	.page-block p{
+		text-align: left;
+		font-size: 15px;
+	}
+
+	.background-icon{
+		left: 45%;
+	}
+
+	.background-img{
+		top:0;
+	}
+
+	.btn-primary{
+		left:10%;
+		top:70%;
+		font-size: 12px;
+	}
+
+	.btn-secondary{
+		left:55%;
+		top:70%;
+		font-size: 12px;
+	}
+	.circles{
+		width: 20%;
+	}
+	.section-projects .lines{
+		display: none;
+	}
+
+	.section-projects__item{
+		margin-bottom: 20px;
+	}
+
+	.section-testimonials{
+		height: 430px;
+	}
+
+	.section-testimonials__background{
+		height: 430px;
+	}
+
+	.section-testimonials .section-testimonials__title{
+		padding-top: 10px;
+
+	}
+
+	.section-testimonials .section-testimonials__text{
+		font-size: 18px;
+	}
+
+	.section-testimonials__person{
+		font-size: 18px;
+	}
+
+	.footer__contact{
+		width: 100%;
+		height: auto;
+		margin-bottom: 20px;
+	}
+
+	.footer__social span{
+		float: left;
+		margin-bottom: 20px;
+	}
+
+	.footer__list{
+		float: left;
+	}
+
+	.footer__list li{
+		float: left;
+		width: 100%;
+    	text-align: left;
+    	font-size: 12px;
+	}
+
+	.team .team__description{
+		margin-bottom: 20px;
+	}
+
+	.portfolio-block{
+		text-align: left;
+	}
+
+	.services__container{
+		width: 87%;
+		margin-bottom: 20px;
+		float: left;
+	}
+
+	.services__text{
+		top: 35px;
+    	position: relative;
+	}
+
+	.projects .projects__index{
+		width: 100%;
+		float: left;
+		margin-bottom: 20px;
+	}
+
+	.projects .projects__list{
+		width: 100%;
+		float: left;
+		margin-bottom: 20px;
 	}
 }
