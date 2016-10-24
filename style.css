@@ -1065,8 +1065,14 @@ p{
 	font-weight: 300;
 }
 
+@media (min-width: 760px) and (max-width: 991px) {
 
-
+	.background-img .btn-primary{
+		left:30%;
+		top:70%;
+		font-size: 12px;
+	}
+}
 /********** RESPONSIVE TO MOBILE *************/
 @media only screen and (max-width: 991px) {
 	.desktop-menu{
