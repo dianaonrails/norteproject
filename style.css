@@ -911,6 +911,7 @@ p{
 }
 
 .services__text{
+	font-weight: 400;
 	font-size: 14px;
 }
 
@@ -1233,8 +1234,9 @@ p{
 	}
 
 	.services__text{
-		top: 35px;
+		top: 20px;
     	position: relative;
+    	margin-bottom: 20px;
 	}
 
 	.projects .projects__index{
