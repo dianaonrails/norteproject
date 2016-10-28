@@ -12,6 +12,17 @@ body, html {
   margin: 0;
 }
 
+.warning{
+	color:#e30b0b;
+	font-size: 12px;
+}
+
+.success-message{
+	margin-top: 50px;
+	font-family: 'Montserrat';
+	font-size: 20px;
+}
+
 /* Styles the thumbnail */
 
 
@@ -154,7 +165,7 @@ a.lightbox-close:after {
 	left: 38%;
 	color: white;
 	text-decoration: none;
-	top:50%;
+	top:55%;
 	font-weight:600;
 	cursor: pointer;
 }
@@ -173,7 +184,7 @@ a.lightbox-close:after {
 	left: 50%;
 	color: white;
 	text-decoration: none;
-	top:50%;
+	top:55%;
 	font-weight:600;
 	cursor: pointer;
 }
@@ -196,8 +207,9 @@ a.lightbox-close:after {
 	left:50%;
 	transform:translate(-50%,-50%);
 	color:white;
-	font-size: 40px;
+	font-size: 50px;
 	font-family: 'Montserrat', sans-serif;
+	line-height: 1.2;
 }
 
 p{
