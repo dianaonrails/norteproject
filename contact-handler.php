@@ -22,7 +22,7 @@ $email_address))
 if( empty($errors))
 {
 	$to = $myemail;
-	$email_subject = "Formulario de contacto ergoproject";
+	$email_subject = "Formulario de contacto norteproject";
 	$email_body = "Recebeu uma nova mensagem a partir do site NorteProject. ".
 	" Aqui estão os detalhes:\n Name: $name \n ".
 	"Email: $email_address\n".

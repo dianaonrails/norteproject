@@ -19,8 +19,8 @@ body, html {
 
 .success-message{
 	margin-top: 50px;
-	font-family: 'Montserrat';
 	font-size: 20px;
+	font-weight: 600;
 }
 
 /* Styles the thumbnail */
